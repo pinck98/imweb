@@ -1,0 +1,80 @@
+@import "var.scss";
+.btn:hover{
+    color: $sec__color;
+    background-color: $txt__colr;
+}
+
+
+input:focus{
+    padding-bottom: 1rem;
+}
+
+.blog__sociallinks:hover{
+    li{
+        border: $txt__colr solid 2px;
+    }
+    a{
+        color: $sec__color;
+    }
+    }
+
+    nav .nav__links li:nth-child(1):hover::after{
+        width: 50%;
+        background-color: $sec__color;
+    }
+    nav .nav__links li:nth-child(2):hover::after{
+        width: 50%;
+        background-color: $sec__color;
+    }
+    nav .nav__links li:nth-child(3):hover::after{
+        width: 50%;
+        background-color: $sec__color;
+    }
+    nav .nav__links li:nth-child(4):hover::after{
+        width: 50%;
+        background-color: $sec__color;
+    }
+    nav .nav__links li:nth-child(5):hover::after{
+        width: 50%;
+        background-color: $sec__color;
+    }
+    nav .nav__links li:nth-child(6):hover::after{
+        width: 50%;
+        background-color: $sec__color;
+    }
+
+    .services__con:hover{
+  
+        box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.1);
+        }
+
+        .projects__con:hover{
+   
+            background-size: 150%;
+        
+           
+        }
+
+        
+        .team__con:hover{
+            background-size: 110%;
+            
+            cursor: pointer;
+        }
+
+        @media (min-width:375px) and (max-width:414px){
+            .projects__con:hover{
+           
+                background-size: 500%;
+            
+               
+            }
+        }
+
+        // .team__con:hover:after{
+        //     width: 100%;
+        //     height: 100%;
+            
+        // }
+
+       

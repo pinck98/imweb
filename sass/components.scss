@@ -1,0 +1,377 @@
+@import "var.scss";
+
+// buttons
+.btn{
+    background-color: $sec__color;
+    color: $txt__colr;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 0.1rem;
+    position: relative;
+    transition: all  0.3s;
+}
+
+// follow__line
+.follow__line{
+    background-color: $sec__color;
+    width: 0.15rem;
+    height: 4rem;
+    margin: 4rem 0;
+    transform: translateX(45vw);
+}
+
+// project images
+.p1{
+    background-color: blue;
+    margin-top: 4rem;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/f9cc2d119280291.609a637510def.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.p2{
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/f32351119035699.609510b4b4dbe.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.p3{
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/e6cedc119280527.609a6472df9d3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.p4{
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/ef378f119294863.609a9d123f347.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+// input 
+input{
+    background-color: transparent;
+    border: none;
+    color: $light__gray;
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 2px solid $light__gray;
+    outline: none;
+    width: 90%;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    transition: all 0.3s;
+    
+}
+textarea{
+    background-color: transparent;
+    border: none;
+    color: $light__gray;
+    font-size: 1rem;
+    font-weight: 400;
+    border-bottom: 2px solid $light__gray;
+    outline: none;
+    width: 90%;
+    font-family: 'Roboto';
+    
+}
+
+//blog__sociallinks
+.blog__sociallinks{
+    display: flex;
+    li{
+        font-size: 2rem;
+            
+            margin-right: 1rem;
+            border: $sec__color solid 2px;
+            border-radius: 100rem;
+            transition: all 0.3s;
+    }
+    a{
+        color: $txt__colr;
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        margin-top: 0.5rem;
+        transition: all 0.3s;
+    }
+    
+}
+
+// nav and thier afters
+nav .nav__links li:nth-child(1){
+    position: relative;
+}
+nav .nav__links li:nth-child(2){
+    position: relative;
+}
+nav .nav__links li:nth-child(3){
+    position: relative;
+}
+nav .nav__links li:nth-child(4){
+    position: relative;
+}
+nav .nav__links li:nth-child(5){
+    position: relative;
+}
+nav .nav__links li:nth-child(6){
+    position: relative;
+}
+nav .nav__links li:nth-child(1)::after{
+    content: "";
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    
+    position: absolute;
+    background-color: $txt__colr;
+    height: 2px;
+    transition: all 0.3s;
+}
+nav .nav__links li:nth-child(2)::after{
+    content: "";
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    
+    position: absolute;
+    background-color: $txt__colr;
+    height: 2px;
+    transition: all 0.3s;
+}
+nav .nav__links li:nth-child(3)::after{
+    content: "";
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    
+    position: absolute;
+    background-color: $txt__colr;
+    height: 2px;
+    transition: all 0.3s;
+}
+nav .nav__links li:nth-child(4)::after{
+    content: "";
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    
+    position: absolute;
+    background-color: $txt__colr;
+    height: 2px;
+    transition: all 0.3s;
+}
+nav .nav__links li:nth-child(5)::after{
+    content: "";
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    
+    position: absolute;
+    background-color: $txt__colr;
+    height: 2px;
+    transition: all 0.3s;
+}
+nav .nav__links li:nth-child(6)::after{
+    content: "";
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    
+    position: absolute;
+    background-color: $txt__colr;
+    height: 2px;
+    transition: all 0.3s;
+}
+
+
+//test
+.team__con{
+    position: relative;
+}
+.team__con::after{
+    content: "";
+    background-color: $sec__color ;
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    border-radius: 100rem;
+    filter: opacity(0.9);
+    
+    transition: all 0.3s;
+}
+
+
+
+// mediass
+
+
+//small
+@media (max-width:375px){
+    .services__con{
+        width: 335px;
+        grid-column: span 4;
+        background-color: $dark__gray;
+        margin-bottom: 2rem;
+        padding: 3rem 2rem;
+
+    }
+    .projects__con{
+        width: 90vw;
+        height: 500px;
+        background-color: yellow;
+        margin-bottom: 4rem;
+        background-size: 300%;
+        transition: all 0.3s;
+        grid-column: span 4;
+    }
+    .team__con{
+        grid-column: span 4;
+        width: 200px;
+        background-image: url(/images/my_final.jpg);
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom center;
+        border-radius: 100rem;
+        transition: all 0.3s;
+        justify-self: center;
+    }
+}
+
+//j7
+@media (min-width:376px) and (max-width:414px){
+    .services__con{
+        width: 335px;
+        background-color: $dark__gray;
+        padding: 3rem 2rem;
+        margin: auto;
+        margin-bottom: 2rem;
+        grid-column: span 4;
+    }
+    .projects__con{
+        width: 90vw;
+        
+        background-color: yellow;
+        margin-bottom: 4rem;
+        background-size: 300%;
+        
+        transition: all 0.3s;
+        grid-column: span 4;
+    }
+    .team__con{
+    grid-column: span 4;
+    width: 200px;
+    background-image: url(/images/my_final.jpg);
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    border-radius: 100rem;
+    transition: all 0.3s;
+    justify-self: center;
+}
+
+
+}
+//ipad
+@media (min-width:415px) and (max-width:768px){
+    .services__con{
+        width: 335px;
+        background-color: $dark__gray;
+        padding: 3rem 2rem;
+        margin: auto;
+        margin-bottom: 2rem;
+        grid-column: span 3;
+        
+    }
+    .follow__line{
+        background-color: $sec__color;
+        width: 0.15rem;
+        height: 4rem;
+        grid-column: span 8;
+        // transform: translateX(45vw);
+    }
+    .projects__con{
+        width: 90vw;
+        height: 500px;
+        background-color: yellow;
+        margin-bottom: 4rem;
+        background-size: 130%;
+        transition: all 0.3s;
+        grid-column: span 8;
+    }
+    .team__con{
+        grid-column: span 8;
+        width: 300px;
+        background-image: url(/images/my_final.jpg);
+        height: 300px;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 100%;
+        border-radius: 100rem;
+        transition: all 0.3s;
+        justify-self: center;
+    }
+}
+//large
+@media (min-width:769px){
+    .services__con{
+        width: 335px;
+        height: 355px;
+        background-color: $dark__gray;
+        padding: 3rem 2rem;
+        margin: auto;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+        grid-column: span 4;
+        transition: all 1s;
+        
+    }
+    .follow__line{
+        background-color: $sec__color;
+        width: 0.15rem;
+        height: 4rem;
+        grid-column: span 12;
+        // transform: translateX(45vw);
+    }
+    .projects__con{
+        width: 45vw;
+        height: 500px;
+        background-color: yellow;
+         margin-bottom: 4rem;
+        grid-column: span 6;
+        position: relative;
+        
+        background-size: 125%;
+        transition: all 1s;
+    }
+    .p1 , .p3{
+        margin-left: -1rem;
+    }
+    .p2{
+        margin-top: 4rem;
+        margin-left: -2rem;
+    }
+    .p4{
+        margin-left: -2rem;
+    }
+    .team__con{
+        grid-column: span 12;
+        width: 300px;
+        background-image: url(/images/my_final.jpg);
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom center;
+        border-radius: 100rem;
+        background-position: center;
+      transition: all 1s;
+        justify-self: center;
+    }
+}
+
+

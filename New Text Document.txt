@@ -1,0 +1,5 @@
+body color #101010
+txt colr #fff
+sec color #e9204f
+light gray #747474
+

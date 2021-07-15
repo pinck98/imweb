@@ -1,0 +1,23 @@
+{
+  "name": "imweb-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prefix": "postcss styles/main.css --use autoprefixer -o styles/pre.css",
+
+"min": "postcss styles/pre.css --use nanocss -o styles/nano.css",
+
+"scc": "node-sass sass/main.scss styles/main.css -w"
+  },
+  "author": "ibrahim_maded",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "cssnano": "^5.0.6",
+    "node-sass": "^6.0.0",
+    "postcss": "^8.3.2",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2"
+  }
+}
