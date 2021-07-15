@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url(/sass/var.scss);
 .btn {
   background-color: #e9204f;
   color: #fff;
@@ -6,7 +7,7 @@
   padding: 1rem 1.5rem;
   border-radius: 0.1rem;
   position: relative;
-  transition: all  0.3s; }
+  transition: all 0.3s; }
 
 .follow__line {
   background-color: #e9204f;
@@ -63,7 +64,7 @@ textarea {
   border-bottom: 2px solid #747474;
   outline: none;
   width: 90%;
-  font-family: 'Roboto'; }
+  font-family: "Roboto"; }
 
 .blog__sociallinks {
   display: flex; }
@@ -163,33 +164,23 @@ nav .nav__links li:nth-child(6)::after {
 .team__con {
   position: relative; }
 
-.team__con::after {
-  content: "";
-  background-color: #e9204f;
-  position: absolute;
-  width: 0%;
-  height: 0%;
-  top: 0;
-  left: 0;
-  border-radius: 100rem;
-  filter: opacity(0.9);
-  transition: all 0.3s; }
-
-@media (max-width: 375px) {
+@media (max-width: 700px) {
   .services__con {
-    width: 335px;
+    width: 100%;
     grid-column: span 4;
+    justify-self: center;
     background-color: #1f1f1f;
     margin-bottom: 2rem;
     padding: 3rem 2rem; }
   .projects__con {
-    width: 90vw;
+    width: 100%;
     height: 500px;
     background-color: yellow;
     margin-bottom: 4rem;
     background-size: 300%;
     transition: all 0.3s;
-    grid-column: span 4; }
+    grid-column: span 4;
+    justify-self: center; }
   .team__con {
     grid-column: span 4;
     width: 200px;
@@ -200,36 +191,16 @@ nav .nav__links li:nth-child(6)::after {
     background-position: bottom center;
     border-radius: 100rem;
     transition: all 0.3s;
-    justify-self: center; } }
-
-@media (min-width: 376px) and (max-width: 414px) {
-  .services__con {
-    width: 335px;
-    background-color: #1f1f1f;
-    padding: 3rem 2rem;
-    margin: auto;
-    margin-bottom: 2rem;
-    grid-column: span 4; }
-  .projects__con {
-    width: 90vw;
-    background-color: yellow;
-    margin-bottom: 4rem;
-    background-size: 300%;
-    transition: all 0.3s;
-    grid-column: span 4; }
-  .team__con {
+    justify-self: center; }
+  .follow__line {
+    background-color: #e9204f;
+    width: 0.15rem;
+    height: 4rem;
     grid-column: span 4;
-    width: 200px;
-    background-image: url(/images/my_final.jpg);
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom center;
-    border-radius: 100rem;
-    transition: all 0.3s;
-    justify-self: center; } }
+    justify-self: center;
+    transform: translateX(0); } }
 
-@media (min-width: 415px) and (max-width: 768px) {
+@media (min-width: 701px) and (max-width: 768px) {
   .services__con {
     width: 335px;
     background-color: #1f1f1f;
@@ -287,7 +258,8 @@ nav .nav__links li:nth-child(6)::after {
     position: relative;
     background-size: 125%;
     transition: all 1s; }
-  .p1, .p3 {
+  .p1,
+  .p3 {
     margin-left: -1rem; }
   .p2 {
     margin-top: 4rem;
@@ -358,7 +330,11 @@ nav .nav__links li:nth-child(6):hover::after {
   .projects__con:hover {
     background-size: 500%; } }
 
-@media (max-width: 375px) {
+.team__con:hover:after {
+  width: 100%;
+  height: 100%; }
+
+@media (max-width: 700px) {
   #nav__close {
     color: rgba(255, 255, 255, 0.4);
     font-size: 3rem;
@@ -388,30 +364,37 @@ nav .nav__links li:nth-child(6):hover::after {
   header {
     background-image: url(/images/ron-whitaker-mVuKCYMGZBM-unsplash-1-scaled.jpeg);
     background-size: cover; }
-    header .nav__sociallinks, header .nav__links {
+    header .nav__sociallinks,
+    header .nav__links {
       display: none; }
     header nav {
       background-color: black;
-      transform: translateX(-1.1rem);
+      justify-self: center;
       width: 100vw;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       grid-column: span 4;
       height: 10vh; }
       header nav .header__logo {
         font-size: 1.5rem;
         font-weight: 900;
-        margin-top: 1.25rem;
+        grid-column: 1/3;
+        align-self: center;
+        justify-self: flex-start;
         margin-left: 1rem; }
         header nav .header__logo a {
           color: white; }
       header nav .nav__bar__mob {
         font-size: 2rem;
-        margin-left: 14rem;
-        margin-top: 1.1rem; }
+        grid-column: 3/4;
+        align-self: center;
+        margin-right: 1rem;
+        justify-self: flex-end; }
     header #hero .herotxt__con {
-      grid-column: span 4; }
+      grid-column: span 4;
+      justify-self: center; }
       header #hero .herotxt__con .hero__head {
-        margin-top: 12rem;
+        margin-top: 9rem;
         margin-bottom: 4rem;
         font-weight: 600;
         font-size: 2rem; }
@@ -419,11 +402,12 @@ nav .nav__links li:nth-child(6):hover::after {
         margin-top: 4rem;
         margin-bottom: 8rem; }
   #services {
-    text-align: left; }
+    text-align: center; }
     #services .servicestxt__con {
       text-align: center;
       margin: 4rem 0;
-      grid-column: span 4; }
+      grid-column: span 4;
+      justify-self: center; }
       #services .servicestxt__con h2 {
         font-size: 2.3rem;
         margin-bottom: 1rem; }
@@ -433,12 +417,13 @@ nav .nav__links li:nth-child(6):hover::after {
       font-size: 4rem; }
     #services .services__head {
       font-size: 1.5rem;
-      margin-top: 4rem;
+      margin-top: 2rem;
       margin-bottom: 1rem; }
     #services .services__info {
       color: #747474; }
   #projects .projectstxt__con {
-    grid-column: span 4; }
+    grid-column: span 4;
+    justify-self: center; }
   #projects .projects__head {
     font-size: 2rem;
     margin-top: 1rem;
@@ -446,7 +431,8 @@ nav .nav__links li:nth-child(6):hover::after {
   #projects .projects__quote {
     color: #747474; }
   #team .teamtxt__con {
-    grid-column: span 4; }
+    grid-column: span 4;
+    justify-self: center; }
   #team .team__head {
     font-weight: 900;
     font-size: 2rem; }
@@ -456,7 +442,8 @@ nav .nav__links li:nth-child(6):hover::after {
   #blog {
     text-align: left; }
     #blog .blogtxt__con {
-      grid-column: span 4; }
+      grid-column: span 4;
+      justify-self: flex-start; }
     #blog .blog__head {
       font-size: 2.5rem; }
     #blog .blog__mail {
@@ -468,9 +455,11 @@ nav .nav__links li:nth-child(6):hover::after {
       color: #747474; }
     #blog .blog__linkscon {
       grid-column: span 4;
-      margin: 4rem 0; }
+      margin: 4rem 0;
+      justify-self: flex-start; }
     #blog .blog__inputcon {
-      grid-column: span 4; }
+      grid-column: span 4;
+      justify-self: flex-start; }
     #blog .btn {
       margin-top: 2rem;
       margin-bottom: 6rem;
@@ -481,484 +470,16 @@ nav .nav__links li:nth-child(6):hover::after {
     height: 20vh; }
     footer .copy {
       grid-column: span 4;
+      justify-self: center;
       margin: 2rem 0;
       color: #747474; }
       footer .copy span {
         color: #fff; }
     footer .links {
       grid-column: span 4;
+      justify-self: center;
       font-weight: 300;
       margin-left: 0.3rem; }
-      footer .links a {
-        color: #fff; }
-      footer .links ul {
-        display: flex; }
-        footer .links ul li {
-          margin-right: 1rem; } }
-
-@media (min-width: 376px) and (max-width: 414px) {
-  #nav__close {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 3rem;
-    position: absolute;
-    right: 2rem;
-    top: 0rem;
-    display: none;
-    cursor: pointer; }
-  #nav__open {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1; }
-    #nav__open li {
-      color: white;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      margin-top: 4rem; }
-    #nav__open a {
-      color: white;
-      font-size: 2rem; }
-  header {
-    background-image: url(/images/ron-whitaker-mVuKCYMGZBM-unsplash-1-scaled.jpeg);
-    background-size: cover; }
-    header .nav__sociallinks, header .nav__links {
-      display: none; }
-    header nav {
-      background-color: black;
-      transform: translateX(-1.1rem);
-      width: 100vw;
-      display: flex;
-      grid-column: span 4;
-      height: 10vh; }
-      header nav .header__logo {
-        font-size: 1.5rem;
-        font-weight: 900;
-        margin-top: 1.25rem;
-        margin-left: 1rem; }
-        header nav .header__logo a {
-          color: white; }
-      header nav .nav__bar__mob {
-        font-size: 2rem;
-        margin-left: 16rem;
-        margin-top: 1.1rem; }
-    header #hero .herotxt__con {
-      grid-column: span 4; }
-      header #hero .herotxt__con .hero__head {
-        margin-top: 12rem;
-        margin-bottom: 4rem;
-        font-weight: 600;
-        font-size: 2rem; }
-      header #hero .herotxt__con a {
-        margin-top: 4rem;
-        margin-bottom: 8rem; }
-  #services {
-    text-align: left; }
-    #services .servicestxt__con {
-      text-align: center;
-      margin: 4rem 0;
-      grid-column: span 4; }
-      #services .servicestxt__con h2 {
-        font-size: 2.3rem;
-        margin-bottom: 1rem; }
-      #services .servicestxt__con p {
-        color: #747474; }
-    #services .services__logo {
-      font-size: 4rem; }
-    #services .services__head {
-      font-size: 1.5rem;
-      margin-top: 4rem;
-      margin-bottom: 1rem; }
-    #services .services__info {
-      color: #747474; }
-  #projects .projectstxt__con {
-    grid-column: span 4; }
-  #projects .projects__head {
-    font-size: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 4rem; }
-  #projects .projects__quote {
-    color: #747474; }
-  #team .teamtxt__con {
-    grid-column: span 4; }
-  #team .team__head {
-    font-weight: 900;
-    font-size: 2rem; }
-  #team .team__quote {
-    margin-top: 2rem;
-    margin-bottom: 4rem; }
-  #blog {
-    text-align: left; }
-    #blog .blogtxt__con {
-      grid-column: span 4; }
-    #blog .blog__head {
-      font-size: 2.5rem; }
-    #blog .blog__mail {
-      color: #e9204f;
-      font-size: 1rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem; }
-    #blog p {
-      color: #747474; }
-    #blog .blog__linkscon {
-      grid-column: span 4;
-      margin: 4rem 0; }
-    #blog .blog__inputcon {
-      grid-column: span 4; }
-    #blog .btn {
-      margin-top: 2rem;
-      margin-bottom: 6rem;
-      width: 50vw;
-      text-align: center; }
-  footer {
-    background-color: black;
-    height: 20vh; }
-    footer .copy {
-      grid-column: span 4;
-      margin: 2rem 0;
-      color: #747474; }
-      footer .copy span {
-        color: #fff; }
-    footer .links {
-      grid-column: span 4;
-      font-weight: 300;
-      margin-left: 0.3rem;
-      justify-self: center; }
-      footer .links a {
-        color: #fff; }
-      footer .links ul {
-        display: flex; }
-        footer .links ul li {
-          margin-right: 1rem; } }
-
-@media (max-width: 768px) and (min-width: 415px) {
-  #nav__close {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 3rem;
-    position: absolute;
-    right: 2rem;
-    top: 0rem;
-    display: none;
-    cursor: pointer; }
-  #nav__open {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1; }
-    #nav__open li {
-      color: white;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      margin-top: 4rem; }
-    #nav__open a {
-      color: white;
-      font-size: 2rem; }
-  header {
-    background-image: url(/images/ron-whitaker-mVuKCYMGZBM-unsplash-1-scaled.jpeg);
-    background-size: cover; }
-    header .nav__bar__mob {
-      display: none; }
-    header nav {
-      display: flex;
-      grid-column: span 8; }
-      header nav .header__logo {
-        font-size: 2rem;
-        margin-left: -1rem;
-        font-weight: 900;
-        margin-top: 2rem; }
-        header nav .header__logo a {
-          color: #fff; }
-      header nav .nav__sociallinks {
-        display: flex;
-        margin-top: 2.6rem; }
-        header nav .nav__sociallinks li {
-          margin-right: 1rem; }
-          header nav .nav__sociallinks li a {
-            color: #fff; }
-      header nav .nav__links {
-        display: flex;
-        margin-left: 7rem;
-        margin-top: 2.6rem; }
-        header nav .nav__links li {
-          margin-right: 1rem; }
-          header nav .nav__links li a {
-            color: #fff; }
-    header #hero .herotxt__con {
-      grid-column: span 8; }
-      header #hero .herotxt__con .hero__head {
-        margin-top: 12rem;
-        margin-bottom: 4rem;
-        font-weight: 600;
-        font-size: 4rem; }
-      header #hero .herotxt__con a {
-        margin-top: 4rem;
-        margin-bottom: 8rem; }
-  #services {
-    text-align: left; }
-    #services .row {
-      column-gap: 7.5rem; }
-    #services .servicestxt__con {
-      text-align: center;
-      margin: 4rem 0;
-      grid-column: span 8;
-      margin-left: -9rem; }
-      #services .servicestxt__con h2 {
-        font-size: 3rem;
-        margin-bottom: 1rem; }
-      #services .servicestxt__con p {
-        color: #747474; }
-    #services .services__logo {
-      font-size: 4rem; }
-    #services .services__head {
-      font-size: 1.5rem;
-      margin-top: 4rem;
-      margin-bottom: 1rem; }
-    #services .services__info {
-      color: #747474; }
-  #projects .row {
-    column-gap: 2rem; }
-  #projects .projectstxt__con {
-    grid-column: span 8; }
-  #projects .projects__head {
-    font-size: 3rem;
-    margin-top: 1rem;
-    margin-bottom: 4rem; }
-  #projects .projects__quote {
-    color: #747474; }
-  #team .teamtxt__con {
-    grid-column: span 8; }
-  #team .team__head {
-    font-weight: 900;
-    font-size: 3rem; }
-  #team .team__quote {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    color: #747474; }
-  #blog {
-    text-align: left; }
-    #blog .blogtxt__con {
-      grid-column: span 4; }
-    #blog .blog__head {
-      font-size: 3.5rem; }
-    #blog .blog__mail {
-      color: #e9204f;
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem; }
-    #blog p {
-      color: #747474; }
-    #blog .blog__linkscon {
-      grid-column: span 4;
-      margin-top: 4rem; }
-    #blog .blog__inputcon {
-      grid-column: span 4;
-      margin-top: 4rem; }
-    #blog .btn {
-      margin-top: 2rem;
-      margin-bottom: 6rem;
-      width: 40vw;
-      text-align: center; }
-  footer {
-    background-color: black;
-    height: 20vh; }
-    footer .copy {
-      grid-column: span 8;
-      margin: 4rem 0;
-      font-size: 1.2rem;
-      color: #747474; }
-      footer .copy span {
-        color: #fff; }
-    footer .links {
-      grid-column: span 8;
-      font-weight: 300;
-      margin-left: 10rem;
-      font-size: 1.2rem; }
-      footer .links a {
-        color: #fff; }
-      footer .links ul {
-        display: flex; }
-        footer .links ul li {
-          margin-right: 1rem; } }
-
-@media (min-width: 769px) {
-  #nav__close {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 3rem;
-    position: absolute;
-    right: 2rem;
-    top: 0rem;
-    display: none;
-    cursor: pointer; }
-  #nav__open {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1; }
-    #nav__open li {
-      color: white;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      margin-top: 4rem; }
-    #nav__open a {
-      color: white;
-      font-size: 2rem; }
-  header {
-    background-image: url(/images/ron-whitaker-mVuKCYMGZBM-unsplash-1-scaled.jpeg);
-    background-size: cover; }
-    header .nav__bar__mob {
-      display: none; }
-    header nav {
-      display: flex;
-      grid-column: span 12; }
-      header nav .header__logo {
-        font-size: 2rem;
-        margin-left: -1rem;
-        font-weight: 900;
-        margin-top: 2rem; }
-        header nav .header__logo a {
-          color: #fff; }
-      header nav .nav__sociallinks {
-        display: flex;
-        margin-top: 2.6rem; }
-        header nav .nav__sociallinks li {
-          margin-right: 2rem; }
-          header nav .nav__sociallinks li a {
-            color: #fff; }
-      header nav .nav__links {
-        display: flex;
-        margin-left: 32rem;
-        margin-top: 2.6rem; }
-        header nav .nav__links li {
-          margin-right: 2rem; }
-          header nav .nav__links li a {
-            color: #fff; }
-    header #hero .herotxt__con {
-      grid-column: 3/10; }
-      header #hero .herotxt__con .hero__head {
-        margin-top: 12rem;
-        margin-bottom: 4rem;
-        font-weight: 600;
-        font-size: 4rem; }
-      header #hero .herotxt__con a {
-        margin-top: 4rem;
-        margin-bottom: 8rem; }
-  #services {
-    text-align: left; }
-    #services .row {
-      column-gap: -4rem; }
-    #services .servicestxt__con {
-      text-align: center;
-      margin: 4rem 0;
-      grid-column: span 12; }
-      #services .servicestxt__con h2 {
-        font-size: 3rem;
-        margin-bottom: 1rem; }
-      #services .servicestxt__con p {
-        color: #747474; }
-    #services .services__logo {
-      font-size: 4rem; }
-    #services .services__head {
-      font-size: 1.5rem;
-      margin-top: 4rem;
-      margin-bottom: 1rem; }
-    #services .services__info {
-      color: #747474; }
-  #projects .row {
-    column-gap: 2rem; }
-  #projects .projectstxt__con {
-    grid-column: span 12; }
-  #projects .projects__head {
-    font-size: 3rem;
-    margin-top: 1rem;
-    margin-bottom: 4rem; }
-  #projects .projects__quote {
-    color: #747474; }
-  #team .teamtxt__con {
-    grid-column: span 12; }
-  #team .team__head {
-    font-weight: 900;
-    font-size: 3rem; }
-  #team .team__quote {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    color: #747474; }
-  #team .team__head {
-    position: absolute;
-    transform: translateX(325%);
-    margin-top: 14rem;
-    font-size: 1.5rem;
-    filter: opacity(0);
-    transition: all 0.3s; }
-  #team .team__work {
-    position: absolute;
-    transform: translateX(825%);
-    margin-top: 16.5rem;
-    filter: opacity(0);
-    transition: all 0.3s; }
-  #team .team__linkscon {
-    position: absolute;
-    margin-top: 18rem;
-    margin-left: 32.5rem;
-    transform: rotate(180deg) scale(-70%);
-    filter: opacity(0);
-    transition: all 0.3s; }
-    #team .team__linkscon li {
-      border: none;
-      background-color: rgba(255, 255, 255, 0.3);
-      padding: 0.1rem; }
-  #blog {
-    text-align: left; }
-    #blog .blogtxt__con {
-      grid-column: span 3; }
-    #blog .blog__head {
-      font-size: 3.5rem; }
-    #blog .blog__mail {
-      color: #e9204f;
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem; }
-    #blog p {
-      color: #747474; }
-    #blog .blog__linkscon {
-      grid-column: span 12;
-      margin-top: 4rem; }
-    #blog .blog__inputcon {
-      grid-column: 5/12;
-      margin-top: -19rem; }
-    #blog .btn {
-      margin-top: 2rem;
-      margin-bottom: 6rem;
-      width: 20vw;
-      text-align: center; }
-  footer {
-    background-color: black;
-    height: 40vh; }
-    footer .copy {
-      grid-column: span 12;
-      margin: 4rem 0;
-      font-size: 1.5rem;
-      color: #747474; }
-      footer .copy span {
-        color: #fff; }
-    footer .links {
-      grid-column: span 12;
-      font-weight: 300;
-      margin-left: 24rem;
-      font-size: 1.5rem; }
       footer .links a {
         color: #fff; }
       footer .links ul {
@@ -989,17 +510,12 @@ ul {
   width: 90vw;
   margin: auto; }
 
-@media (max-width: 375px) {
+@media (max-width: 700px) {
   .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr); } }
 
-@media (min-width: 376px) and (max-width: 414px) {
-  .row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); } }
-
-@media (max-width: 768px) and (min-width: 415px) {
+@media (max-width: 768px) and (min-width: 701px) {
   .row {
     display: grid;
     grid-template-columns: repeat(7, 1fr); } }

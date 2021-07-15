@@ -1,0 +1,246 @@
+@import "var.scss";
+
+@media (max-width:768px) and (min-width:415px) {
+    #nav__close{
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 3rem;
+        position: absolute;
+        right: 2rem;
+        top: 0rem;
+        display: none;
+        cursor: pointer;
+    }
+    #nav__open{
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 1;
+        li{
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            margin-top: 4rem;
+        }
+        a{
+            color: white;
+            font-size: 2rem;
+        }
+    }
+    header{
+
+        background-image: url(/images/ron-whitaker-mVuKCYMGZBM-unsplash-1-scaled.jpeg) ;
+
+        background-size: cover;
+
+        .nav__bar__mob{
+            display: none;
+        }
+
+
+
+
+        nav{
+
+            display: flex;
+            grid-column: span 8;
+
+
+            .header__logo{
+                font-size: 2rem;
+                margin-left: -1rem;
+                font-weight: 900;
+                margin-top: 2rem;
+               a{
+                   color: $txt__colr;
+               }
+            }
+
+            .nav__sociallinks{
+                display: flex;
+                margin-top: 2.6rem;
+                li{
+                    margin-right: 1rem;
+                    a{
+                    color: $txt__colr;
+                }
+            }
+        }
+           .nav__links {
+               display: flex;
+               margin-left: 7rem;
+               margin-top: 2.6rem;
+
+
+               li{
+                   margin-right: 1rem;
+                   a{
+                   color: $txt__colr;
+               }
+            }
+           }
+        }
+
+        #hero{
+            .herotxt__con{
+                grid-column: span 8;
+
+                .hero__head{
+                    margin-top: 12rem;
+                    margin-bottom: 4rem;
+                    font-weight: 600;
+                    font-size: 4rem;
+                }
+                a{
+                    margin-top: 4rem;
+                    margin-bottom: 8rem;
+                }
+            }
+
+
+        }
+
+
+}
+
+#services{
+    .row{
+        column-gap: 7.5rem;
+    }
+    text-align: left;
+    .servicestxt__con{
+        text-align: center;
+        margin: 4rem 0;
+        grid-column: span 8;
+        margin-left: -9rem;
+        h2{
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            color: $light__gray;
+
+        }
+    }
+
+
+    .services__logo{
+        font-size: 4rem;
+    }
+    .services__head{
+        font-size: 1.5rem;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
+    .services__info{
+        color: $light__gray;
+    }
+}
+
+#projects{
+    .row{
+        column-gap: 2rem;
+    }
+    .projectstxt__con{
+        grid-column: span 8;
+
+
+    }
+    .projects__head{
+        font-size: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+    .projects__quote{
+        color: $light__gray;
+    }
+
+}
+
+#team{
+    .teamtxt__con{
+        grid-column: span 8;
+
+    }
+    .team__head{
+        font-weight: 900;
+       font-size: 3rem;
+    }
+    .team__quote{
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        color: $light__gray;
+    }
+
+}
+#blog{
+
+    text-align: left;
+    .blogtxt__con{
+        grid-column: span 4;
+    }
+    .blog__head{
+        font-size: 3.5rem;
+    }
+    .blog__mail{
+        color: $sec__color;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    p{
+        color: $light__gray;
+
+    }
+    .blog__linkscon{
+        grid-column: span 4;
+        margin-top: 4rem;
+    }
+    .blog__inputcon{
+        grid-column: span 4;
+       margin-top: 4rem;
+
+    }
+    .btn{
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+        width: 40vw;
+        text-align: center;
+    }
+}
+footer{
+    background-color: black;
+    height: 20vh;
+    .copy{
+        grid-column: span 8;
+        margin: 4rem 0;
+        font-size: 1.2rem;
+        color: $light__gray;
+        span{
+            color: $txt__colr;
+        }
+    }
+    .links{
+        grid-column: span 8;
+        font-weight: 300;
+        margin-left: 10rem;
+        font-size: 1.2rem;
+
+        a{
+            color: $txt__colr;
+        }
+        ul{
+            display: flex;
+
+
+            li{
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+}
