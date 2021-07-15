@@ -13,7 +13,7 @@ $(navOpenUl).click(function(){
         $("#nav__open , #nav__close").slideToggle(300);
 });
 
-$(".team__con").click(function(){
+$(".team__con").mouseover(function(){
         $(".team__con__info").show(300);
 
 });
