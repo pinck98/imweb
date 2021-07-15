@@ -1,23 +1,25 @@
-const close = document.getElementById('nav__close');
-const open = document.getElementsByClassName('nav__bar__mob')[0];
-const nav = document.getElementById('nav__open');
-open.addEventListener('touchstart', opennav);
+const navOpenUl = document.querySelector("#nav__open__ul").children;
 
 
-close.addEventListener('touchstart', closenav);
+$(".nav__bar__mob").click(function(){
+        $("#nav__open , #nav__close").slideToggle(300);
+});
 
-function closenav(e){
-    nav.style.display = 'none';
-        close.style.display = 'none';
-}
+$("#nav__close").click(function(){
+        $("#nav__open , #nav__close").slideToggle(300);
+});
 
-function opennav(e){
-    
-    
-        nav.style.display = 'unset';
-        close.style.display = 'unset';
-        
-    
-    
+$(navOpenUl).click(function(){
+        $("#nav__open , #nav__close").slideToggle(300);
+});
 
-}
+$(".team__con").mouseenter(function(){
+        $(".team__con__info").show(300);
+
+});
+
+$(".team__con").mouseleave(function(){
+        $(".team__con__info").hide(300);
+
+});
+

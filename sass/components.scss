@@ -186,33 +186,33 @@ nav .nav__links li:nth-child(6)::after {
 .team__con {
   position: relative;
 }
-// .team__con::after {
-//   content: "";
-//   background-color: $sec__color;
-//   position: absolute;
-//   width: 0%;
-//   height: 0%;
-//   top: 0;
-//   left: 0;
-//   border-radius: 100rem;
-//   filter: opacity(0.9);
+.team__con::after {
+  content: "";
+  background-color: $sec__color;
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  border-radius: 100rem;
+  filter: opacity(0.9);
 
-//   transition: all 0.3s;
-// }
+  transition: all 0.3s;
+}
 
-// .team__con::before {
-//   content: "Ibrahim Maded";
-//   color: $txt__colr;
-//   position: absolute;
-// z-index: 1;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50% , -50%);
+.team__con__info{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  transform: translate(-50% ,-50%);
 
-
-
-//   transition: all 0.3s;
-// }
+  small{
+    font-size: 0.6rem;
+  }
+}
 
 // mediass
 
@@ -259,7 +259,7 @@ nav .nav__links li:nth-child(6)::after {
 }
 
 //ipad
-@media (min-width: 701px) and (max-width: 768px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .services__con {
     width: 335px;
     background-color: $dark__gray;
@@ -298,7 +298,7 @@ nav .nav__links li:nth-child(6)::after {
   }
 }
 //large
-@media (min-width: 769px) {
+@media (min-width: 1000px) {
   .services__con {
     width: 335px;
     height: 355px;
