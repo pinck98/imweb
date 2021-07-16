@@ -24,25 +24,25 @@
 .p1 {
 
   background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/f9cc2d119280291.609a637510def.jpg);
-  background-size: cover;
+
   background-position: center;
   height: 100vh;
 }
 .p2 {
   background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/f32351119035699.609510b4b4dbe.jpg);
-  background-size: cover;
+
   background-position: center;
   height: 100vh;
 }
 .p3 {
   background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/e6cedc119280527.609a6472df9d3.jpg);
-  background-size: cover;
+
   background-position: center;
   height: 100vh;
 }
 .p4 {
   background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/ef378f119294863.609a9d123f347.jpg);
-  background-size: cover;
+
   background-position: center;
   height: 100vh;
 }
@@ -228,9 +228,10 @@ nav .nav__links li:nth-child(6)::after {
   .projects__con {
     width: 100%;
     height: 500px;
-    background-color: yellow;
+    //background-color: yellow;
     margin-bottom: 4rem;
-    background-size: 300%;
+    background-size: 230%;
+    background-repeat: no-repeat;
     transition: all 0.3s;
     grid-column: span 4;
     justify-self: center;
@@ -277,9 +278,9 @@ nav .nav__links li:nth-child(6)::after {
   .projects__con {
     width: 110%;
     height: 500px;
-    background-color: yellow;
+    //background-color: yellow;
     margin-bottom: 4rem;
-
+    background-size: 180%;
     transition: all 0.3s;
 
   }
