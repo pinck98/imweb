@@ -22,8 +22,7 @@
 
 // project images
 .p1 {
-  background-color: blue;
-  margin-top: 4rem;
+
   background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/f9cc2d119280291.609a637510def.jpg);
   background-size: cover;
   background-position: center;
@@ -261,12 +260,12 @@ nav .nav__links li:nth-child(6)::after {
 //ipad
 @media (min-width: 701px) and (max-width: 1000px) {
   .services__con {
-    width: 335px;
+    width: 110%;
     background-color: $dark__gray;
     padding: 3rem 2rem;
-    margin: auto;
+   // margin: auto;
     margin-bottom: 2rem;
-    grid-column: span 3;
+
   }
   .follow__line {
     background-color: $sec__color;
@@ -276,13 +275,13 @@ nav .nav__links li:nth-child(6)::after {
     // transform: translateX(45vw);
   }
   .projects__con {
-    width: 90vw;
+    width: 110%;
     height: 500px;
     background-color: yellow;
     margin-bottom: 4rem;
-    background-size: 130%;
+
     transition: all 0.3s;
-    grid-column: span 8;
+
   }
   .team__con {
     grid-column: span 8;
@@ -298,7 +297,7 @@ nav .nav__links li:nth-child(6)::after {
   }
 }
 //large
-@media (min-width: 1000px) {
+@media (min-width: 1001px) {
   .services__con {
     width: 335px;
     height: 355px;
@@ -328,10 +327,10 @@ nav .nav__links li:nth-child(6)::after {
     background-size: 125%;
     transition: all 1s;
   }
-  .p1,
-  .p3 {
-    margin-left: -1rem;
-  }
+  // .p1,
+  // .p3 {
+  //   margin-left: -1rem;
+  // }
   .p2 {
     margin-top: 4rem;
     margin-left: -2rem;
