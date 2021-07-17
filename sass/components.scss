@@ -300,14 +300,14 @@ nav .nav__links li:nth-child(6)::after {
 //large
 @media (min-width: 1001px) {
   .services__con {
-    width: 335px;
+    width: 100%;
     height: 355px;
     background-color: $dark__gray;
     padding: 3rem 2rem;
     margin: auto;
     margin-bottom: 2rem;
     margin-top: 4rem;
-    grid-column: span 4;
+
     transition: all 1s;
   }
   .follow__line {
@@ -315,30 +315,33 @@ nav .nav__links li:nth-child(6)::after {
     width: 0.15rem;
     height: 4rem;
     grid-column: span 12;
-    // transform: translateX(45vw);
+    justify-self: center;
+    transform: translateX(0);
   }
   .projects__con {
     width: 45vw;
     height: 500px;
-    background-color: yellow;
+    //background-color: yellow;
     margin-bottom: 4rem;
-    grid-column: span 6;
+
     position: relative;
 
     background-size: 125%;
     transition: all 1s;
   }
-  // .p1,
-  // .p3 {
-  //   margin-left: -1rem;
-  // }
-  .p2 {
-    margin-top: 4rem;
-    margin-left: -2rem;
+  .p1,
+  .p3 {
+    grid-column: 1/6;
+    justify-self: flex-start;
+    width: 100%;
   }
-  .p4 {
-    margin-left: -2rem;
+  .p2 , .p4{
+
+    grid-column: 7/12;
+    justify-self: flex-end;
+    width: 100%;
   }
+
   .team__con {
     grid-column: span 12;
     width: 300px;

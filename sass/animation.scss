@@ -7,6 +7,15 @@
 
 input:focus{
     padding-bottom: 1rem;
+    border-bottom: 2px solid $sec__color;
+}
+
+textarea:focus{
+    border-bottom: 2px solid $sec__color;
+}
+
+footer a:hover{
+    text-decoration: underline;
 }
 
 .blog__sociallinks:hover{
@@ -17,10 +26,13 @@ input:focus{
         color: $sec__color;
     }
     }
-
+    nav .nav__links li{
+        padding-bottom: 0.3rem;
+    }
     nav .nav__links li:nth-child(1):hover::after{
         width: 50%;
         background-color: $sec__color;
+
     }
     nav .nav__links li:nth-child(2):hover::after{
         width: 50%;
@@ -89,3 +101,13 @@ input:focus{
 
     }
 }
+
+@media (min-width:1001px) {
+    .projects__con:hover{
+
+        background-size: 175%;
+
+
+    }
+}
+
